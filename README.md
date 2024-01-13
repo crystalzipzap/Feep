@@ -1,2 +1,3 @@
 # TodoList
-The goto for getting comfy with a tech stack
+MERN sounds fun, so let's do it! 
+
