@@ -1,6 +1,7 @@
 import "dotenv/config";
 import express, { Request, Response, NextFunction } from "express";
 import notesRoutes from "./routes/notesRts";
+import userRoutes from "./routes/usersRts";
 import morgan from "morgan";
 import createHttpError, { isHttpError } from "http-errors";
 
@@ -12,8 +13,10 @@ app.use(express.json());
 
 app.use("/api/notes", notesRoutes);
 
+app.use("/api/users", userRoutes);
+
 app.use((req, res, next) => {
-  next(createHttpError(404, "Endpoint not found"));
+  next(createHttpError(404, "an error has occurred"));
 });
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
